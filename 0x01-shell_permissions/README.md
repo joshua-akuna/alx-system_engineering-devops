@@ -16,4 +16,4 @@ This is a desription of the files in this projects directory for the ALX task0x0
 14. 100-change_owner_and _group: a script to change the owner to 'vincent' and group owner to 'staff' for all files and directories in the current working directory.
 15. 101-symbolic_link_permissions: a script to change the owner and group owner of the '_hello' symbolic link to 'vincent' and 'staff' respectively.
 16. 102-if_only: a script to change the owner of the file 'hello' to betty only if it is owned by guillaume.
-17. 103-star_wars: 
+17. 103-star_wars: a script that will play the StarWars IV episode in the terminal. 
