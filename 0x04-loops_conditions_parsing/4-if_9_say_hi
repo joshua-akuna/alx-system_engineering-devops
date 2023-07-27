@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# displays "Best school" 10 times but also displays "Hi" on the 9th iteration using a while loop
+
+counter=1
+while [ $counter -le 10 ]; do
+       echo "Best School"
+       if [ $counter == 9 ]
+       then
+	       echo "Hi"
+       fi
+       ((counter++))
+done
