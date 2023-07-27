@@ -3,6 +3,6 @@
 
 files=$(ls)
 
-for file in files; do
-	echo "$files"
+for file in $files; do
+	echo "$file"
 done
