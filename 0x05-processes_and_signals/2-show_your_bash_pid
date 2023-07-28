@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# the script displays a list of currently running processes for only lines that contains the bash word
+#	must show all processes, for all users, including those which might not have a TTY
+#	displat in a user-oriented format.
+#	show process hierarchy
+# shellcheck disable=SC2009
+
+ps faux | grep bash
