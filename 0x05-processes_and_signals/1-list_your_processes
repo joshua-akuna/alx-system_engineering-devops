@@ -4,4 +4,4 @@
 #	displat in a user-oriented format.
 #	show process hierarchy
 
-ps -aux
+ps faux
