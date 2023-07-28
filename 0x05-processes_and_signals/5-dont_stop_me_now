@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 
+# the bash script stops the 4-to_infinity_and_beyond process using the kill command
 
 pid=$(pgrep -f to_infinity_and_beyond)
 kill "$pid"
