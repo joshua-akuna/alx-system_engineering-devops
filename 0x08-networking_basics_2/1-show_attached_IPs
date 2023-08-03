@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 #
 
-ips=$(hostname -I)
-addr=(${ips//" "/})
+# ips=$(hostname -I)
+# addr=(${ips//" "/})
 
-for ip in "${addr[@]}"; do
-	printf "$ip\n"
-done
+# for ip in "${addr[@]}"; do
+# 	printf "$ip\n"
+# done
+
+ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]" | cut -b 6-
