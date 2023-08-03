@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+
+ips=$(hostname -I)
+addr=(${ips//" "/})
+
+for ip in "${addr[@]}"; do
+	printf "$ip\n"
+done
