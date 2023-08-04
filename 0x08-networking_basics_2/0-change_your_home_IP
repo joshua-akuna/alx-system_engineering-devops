@@ -3,5 +3,5 @@
 #	localhost resolves to 127.0.0.2
 #	facebook.com resolves to 8.8.8.8
 
-echo "127.0.0.2\t\t\tlocalhost\n\t\t\tfacebook.com" > ~/hosts
+printf "127.0.0.2\t\t\tlocalhost\n\t\t\tfacebook.com" > ~/hosts
 cp -f ~/hosts /etc/hosts
