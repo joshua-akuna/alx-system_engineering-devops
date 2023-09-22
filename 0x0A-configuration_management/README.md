@@ -45,3 +45,11 @@ Requirements:
 * Version must be *2.1.0*
 
 **File**: [1-install_a_package.pp](https://github.com/joshua-akuna/alx-system_engineering-devops/blob/master/0x0A-configuration_management/1-install_a_package.pp)
+
+### 2. Execute a command
+Using Puppet, create a manifest that kills a process name *killmenow*
+Requirements:
+* Must use the *exec* Puppet resource
+* Must use *pkill*
+
+**File**: [2-execute_a_command.pp](https://github.com/joshua-akuna/alx-system_engineering-devops/blob/master/0x0A-configuration_management/2-execute_a_command.pp)
