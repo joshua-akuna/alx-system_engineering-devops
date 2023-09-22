@@ -49,3 +49,6 @@ Requirements:
 * Must use *pkill*
 
 **File**: [2-execute_a_command.pp](https://github.com/joshua-akuna/alx-system_engineering-devops/blob/master/0x0A-configuration_management/2-execute_a_command.pp)
+
+## AUTHOR
+[Akuna Joshua](https://linkedin.com/in/akuna-joshua-b34001101)
