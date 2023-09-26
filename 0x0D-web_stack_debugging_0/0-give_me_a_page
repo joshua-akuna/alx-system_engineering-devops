@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script debugs an apache2 server installed on the
 # docker image holbertonschool/265-0 
-service apache2 start
+sudo service apache2 start
