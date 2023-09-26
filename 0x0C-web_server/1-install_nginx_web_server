@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# install nginx for a new ubuntu machine and configures nginx to
+# returns the string "Hello World!" as a response when querying
+# at its root /
+apt-get update
+apt-get install nginx -y
+sudo sh -c 'echo "Hello World!" > /var/www/html/index.nginx-debian.html'
+sudo service nginx start
