@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# configures to nginx server to permanently redirect the /redirect_me path
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/backup_1
+sudo sed -i '/server_name _;/a \\n\tlocation = \/redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4i;\n\t}' /etc/nginx/sites-available/default
