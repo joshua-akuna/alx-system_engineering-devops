@@ -1,10 +1,10 @@
-# This manifest install and configures nginx using puppet
+# This manifest installs and configures nginx using puppet
 
 package {'nginx':
   ensure => 'present',
 }
 
-exec {'installation':
+exec {'install':
   command  => 'sudo apt-get update ; sudo apt-get -y install nginx',
   provider => shell,
 
@@ -19,7 +19,7 @@ exec {'sudo sed -i "s/listen 80 default_server;/listen 80 default_server;\\n\\tl
   provider => shell,
 }
 
-exec {'server_restart':
+exec {'run':
   command  => 'sudo service nginx restart',
   provider => shell,
 }
