@@ -5,16 +5,6 @@ exec {'install':
   provider => shell,
 }
 
-exec {'index page':
-  command  => 'echo "Hello World!" | sudo tee /var/www/html/index.html',
-  provider => shell,
-}
-
-exec {'permanent redirect':
-  command  => 'sudo sed -i "s/listen 80 default_server;/listen 80 default_server;\n\n\tlocation \/redirect_me {\n\t\treturn 301 https:\/\/www.youtube.com\/;\n\t}/" /etc/nginx/sites-available/default',
-  provider => shell,
-}
-
 exec {'add custom header':
   command  => 'sudo sed -i "s/include \/etc\/nginx\/sites-enabled\/\*;/include \/etc\/nginx\/sites-enabled\/\*;\n\n\tadd_header X-Served-By $(hostname);/" /etc/nginx/nginx.conf',
   provider => shell,
