@@ -1,16 +1,25 @@
 #!/usr/bin/env bash
-# Install and configure haproxy for lb-01 server
-sudo apt-get -y update;
-sudo apt-get install -y haproxy
+# Install and configure haproxy as a load balancer
 
-echo "frontend http-in" | sudo tee -a /etc/haproxy/haproxy.cfg                      echo "        bind *:80" | sudo tee -a /etc/haproxy/haproxy.cfg
-echo "        mode http" | sudo tee -a /etc/haproxy/haproxy.cfg
-echo "        default_backend webservers" | sudo tee -a /etc/haproxy/haproxy.cfg
-echo "backend webservers" | sudo tee -a /etc/haproxy/haproxy.cfg
-echo "        balance roundrobin" | sudo tee -a /etc/haproxy/haproxy.cfg
-echo "        server 274489-web-01 100.25.24.43:80 check" | sudo tee -a /etc/haproxy/haproxy.cfg
-echo "        server 274489-web-02 100.24.253.164:80 check" | sudo tee -a /etc/haproxy/haproxy.cfg
+sudo apt-get -y update
+apt-get -y install haproxy
 
+# configure the front-end and backend servers for the load balancer
+config=\
+"
+frontend  http-in
+        bind *:80
+        mode http
+        default_backend webservers
+backend webservers
+        balance roundrobin
+        server 63210-web-01 100.25.19.204:80 check
+        server 63210-web-02 54.157.159.85:80 check
+"
+echo "$config" | sudo tee -a /etc/haproxy/haproxy.cfg
+
+# enable haproxy to be started by init script
 echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
 
-sudo service haproxy start
+# restarts the haproxy load balancer
+sudo service haproxy restart
