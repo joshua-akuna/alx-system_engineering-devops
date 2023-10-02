@@ -3,12 +3,9 @@
 sudo apt-get -y update;
 sudo apt-get install -y haproxy
 
-echo "" | sudo tee -a /etc/haproxy/haproxy.cfg
 echo "frontend http-in" | sudo tee -a /etc/haproxy/haproxy.cfg                      echo "        bind *:80" | sudo tee -a /etc/haproxy/haproxy.cfg
 echo "        mode http" | sudo tee -a /etc/haproxy/haproxy.cfg
 echo "        default_backend webservers" | sudo tee -a /etc/haproxy/haproxy.cfg
-
-echo "" | sudo tee -a /etc/haproxy/haproxy.cfg
 echo "backend webservers" | sudo tee -a /etc/haproxy/haproxy.cfg
 echo "        balance roundrobin" | sudo tee -a /etc/haproxy/haproxy.cfg
 echo "        server 274489-web-01 100.25.24.43:80 check" | sudo tee -a /etc/haproxy/haproxy.cfg
