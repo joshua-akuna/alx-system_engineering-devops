@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# debugs the nginx server
+replacement="listen 80 default_server;"
+sed -i "s/listen 8080 default_server;/$replacement/" /etc/nginx/sites-enabled/default
+replacement="listen \[::\]:80 default_server ipv6only=on;"
+sed -i "s/listen \[::\]:8080 default_server ipv6only=on;/$replacement/" /etc/nginx/sites-enabled/default
+sudo service nginx restart
