@@ -88,7 +88,7 @@ The subdomain web-02 is a A record and points to 54.89.38.100
 sylvain@ubuntu$
 ```
 
-File: [0-world_wide_web]()
+File: [0-world_wide_web](https://github.com/joshua-akuna/alx-system_engineering-devops/blob/master/0x10-https_ssl/0-world_wide_web)
 
 ### 1. HAproxy SSL termination
 "Terminating SSL on HAproxy" means that HAproxy is configured to handle encrypted traffic, unencrypt it and pass it on to its direction.
@@ -124,7 +124,7 @@ Holberton School for the win!
 sylvain@ubuntu$
 ```
 
-File: [1-haproxy_ssl_termination]()
+File: [1-haproxy_ssl_termination](https://github.com/joshua-akuna/alx-system_engineering-devops/blob/master/0x10-https_ssl/1-haproxy_ssl_termination)
 
 ### 2. No loophole in your website traffic
 A good habit is to enforce HTTPS traffic so that no unencrypted traffic is possible. Configure HAproxy to automatically redirect HTTP traffic to HTTPS.
@@ -159,4 +159,4 @@ Accept-Ranges: bytes
 sylvain@ubuntu$
 ```
 
-File: [100-redirect_http_to_https]()
+File: [100-redirect_http_to_https](https://github.com/joshua-akuna/alx-system_engineering-devops/blob/master/0x10-https_ssl/100-redirect_http_to_https)
