@@ -2,8 +2,8 @@
 
 ## Concepts
 For this project, we expect you to look at these concepts
-* [DNS]()
-* [Web stack debugging]()
+* [DNS](https://github.com/joshua-akuna/alx-system_engineering-devops/blob/master/0x10-https_ssl/DNS)
+* [Web stack debugging](https://github.com/joshua-akuna/alx-system_engineering-devops/blob/master/0x10-https_ssl/web_stack_debugging)
 
 ![HTTPS](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/276/FlhGPEK.png)
 
