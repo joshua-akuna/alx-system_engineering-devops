@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Installs and configures ufw on a server to block all incoming traffic except those on TCP Ports 22, 443 and 80.
+
+# update server
+sudo apt update
+
+# install ufw on server
+sudo apt install ufw -y
+
+# allow all outgoing connections
+sudo ufw default allow outgoing
+
+# deny all incoming connectons
+sudo ufw default deny incoming
+
+# allow connection on TCP Ports 22, 443, 80
+sudo ufw allow 22
+sudo ufw allow 443
+sudo ufw allow 80
+
+# enable ufw
+sudo ufw enable
