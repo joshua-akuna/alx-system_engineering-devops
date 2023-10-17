@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# generates a MySQL dump for all the databases in the server and create an archive from it.
+
+if [ $# -eq 1 ]
+then
+	# get the current date in ths desired format
+	current_date=$(date +"%d-%m-%Y")
+
+	# specify the backup file and archive name
+	backup_file="backup.sql"
+	archive_name="${current_date}.tar.gz"
+
+	# perform the mysql dump
+	mysqldump -u root -p"$1" --all-databases > "$backup_file"
+
+	# archives the backup file
+	tar -czvf "$archive_name" "$backup_file"
+fi
