@@ -10,7 +10,7 @@ For this project, we expect you to look at this concept:
 
 ### 0. Run software as another user
 
-![yoda](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/eaeff07a715ff880b1ceb8e863a1d141a74a7f85.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20231018%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231018T125931Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=d4c345663dbac1395ab7fca64ed43584901bdf18fb79436aeced3706645f9ef4)
+![yoda](https://github.com/joshua-akuna/alx-system_engineering-devops/blob/master/0x12-web_stack_debugging_2/yoda_image.png)
 
 The user *root* is, on Linux, the "superuser". It can do anything it wants, that's a good and bad thing. A good practice is that one should never be logged in the *root* user, as if you fat finger a command and for example run *rm -rf /*, there is no comeback. That's why it is preferable to run as a privileged user, meaning that the user also has the ability to perform tasks that the *root* user can do, just need to use a specific command that you need to discover.
 
