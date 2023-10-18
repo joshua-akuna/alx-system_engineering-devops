@@ -75,4 +75,4 @@ Requirements:
 * You cannot use *wget*
 * You cannot execute your previous answer file (Do not include the name of the previous script in this one)
 
-File: [100-fin_in_7_lines_or_less](https://github.com/joshua-akuna/alx-system_engineering-devops/blob/master/0x12-web_stack_debugging_2/100-fix_in_7_lines_or_less)
+File: [100-fix_in_7_lines_or_less](https://github.com/joshua-akuna/alx-system_engineering-devops/blob/master/0x12-web_stack_debugging_2/100-fix_in_7_lines_or_less)
