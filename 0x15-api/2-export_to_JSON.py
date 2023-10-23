@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-'''The python script gets data from a REST API for a given
-    employee ID and returns information about his/her TODO
-    list progress
+'''The script extends what was done in task #0 to export data
+    in json format
+    Requirement:
+    - Records all tasks owned by this employee
+    - File name must be: USER_ID.json
 '''
 
 import json
