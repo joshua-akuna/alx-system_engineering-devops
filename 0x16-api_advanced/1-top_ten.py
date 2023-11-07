@@ -6,11 +6,12 @@ import requests
 
 
 def top_ten(subreddit):
-    '''
+    '''The function queries the Reddit API and prints the title of the
+        first 10 hot posts listed for a given subreddit
     '''
     # defines the user-agent for the HTTP GET request
     headers = {'User-Agent': 'MyRedditBot/1.0'}
-    
+
     # defines the URL for the http GET request
     URL = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
 
@@ -28,5 +29,6 @@ def top_ten(subreddit):
                 post_title = post.get('data').get('title')
                 print(post_title)
         except Exception:
-            return 0
-    return 0
+            print None
+    else:
+        print None
