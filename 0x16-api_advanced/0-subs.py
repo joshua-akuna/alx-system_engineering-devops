@@ -20,7 +20,7 @@ def number_of_subscribers(subreddit):
     URL = "https://www.reddit.com/r/{}/about.json".format(subreddit)
 
     # Sends a GET rewuest to the reddit API
-    res = requests.get(URL, headers)
+    res = requests.get(URL, headers, allow_redirects=False)
     if res.status_code == 200:
         payload = res.json()
         data = payload.get('data')
