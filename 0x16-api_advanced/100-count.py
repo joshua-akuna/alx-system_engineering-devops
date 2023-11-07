@@ -37,7 +37,7 @@ def count_words(subreddit, word_list, after=None, word_count={}):
             count_words(subreddit, word_list, after, word_count)
         else:
             if len(word_count):
-                print(word_count)
+                # print(word_count)
                 word_count = sorted(word_count.items(),
                                     key=lambda item: (-item[1], item[0]))
                 word_count = dict(word_count)
