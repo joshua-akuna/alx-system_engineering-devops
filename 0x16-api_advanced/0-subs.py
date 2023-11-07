@@ -22,7 +22,10 @@ def number_of_subscribers(subreddit):
     # Sends a GET rewuest to the reddit API
     res = requests.get(URL, headers, allow_redirects=False)
     if res.status_code == 200:
-        payload = res.json()
-        data = payload.get('data')
-        return data.get('subscribers')
+        try:
+                payload = res.json()
+                data = payload.get('data')
+                return data.get('subscribers')
+        except Exception:
+            return 0
     return 0
