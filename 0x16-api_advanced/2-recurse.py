@@ -20,7 +20,8 @@ def recurse(subreddit, hot_list=[], after=None):
     params = {'after': after}
 
     # sends a GET request to the Reddit API
-    res = requests.get(URL, headers=headers, params=params)
+    res = requests.get(URL, headers=headers,
+                       params=params, allow_redirects=False)
     if res.status_code == 200:
         try:
             # parse the JSON response of the URL request
@@ -40,6 +41,6 @@ def recurse(subreddit, hot_list=[], after=None):
             # returns the hot_list if there is no more next page
             return hot_list
         except Exception:
-            return hot_list
+            return None
 
     return None
