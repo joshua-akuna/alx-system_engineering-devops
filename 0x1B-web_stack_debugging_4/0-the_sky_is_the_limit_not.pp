@@ -2,9 +2,10 @@
 # the server can handle
 
 # Increases the ULIMIT of the default file
-exec { 'fix--for-nginx':
-  path    => '/usr/local/bin/:/bin/'
-  command => 'sed -i "s/15/4096/" /etc/default/nginx',
+exec { 'modify file config':
+  provider => shell,
+  command  => 'sudo sed -i "s/ULIMIT=\"-n 15\"/ULIMIT=\"-n 4096\"/" /etc/default/nginx',
+  before   => Exec['restart'],
 }
 
 # Restarts the Nginx server
